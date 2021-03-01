@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjectOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wq5-VY-dmd" userLabel="PagerView" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="71" width="414" height="200"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wq5-VY-dmd" secondAttribute="height" multiplier="207:100" id="S8A-ls-ubh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qK7-Jr-5Gt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ajK-TB-Fc5"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x5-gp-Jju" userLabel="Pager" customClass="FSPageControl" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="229" width="414" height="42"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2x5-gp-Jju" secondAttribute="height" multiplier="69:7" id="Spt-X2-Eqd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="interitemSpacing">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2x5-gp-Jju" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="13c-9u-9wj"/>
+                            <constraint firstItem="Wq5-VY-dmd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="DQ4-UP-yKQ"/>
+                            <constraint firstItem="Wq5-VY-dmd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ror-la-fsz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2x5-gp-Jju" secondAttribute="trailing" id="ZQb-h5-3zO"/>
+                            <constraint firstItem="Wq5-VY-dmd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fwJ-CF-dD1"/>
+                            <constraint firstItem="2x5-gp-Jju" firstAttribute="bottom" secondItem="Wq5-VY-dmd" secondAttribute="bottom" id="i3X-Bv-Nxc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="2x5-gp-Jju" id="Weq-Yc-0Mb"/>
+                        <outlet property="pagerView" destination="Wq5-VY-dmd" id="V1P-pG-SJd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386" y="81"/>
+        </scene>
+    </scenes>
+</document>
